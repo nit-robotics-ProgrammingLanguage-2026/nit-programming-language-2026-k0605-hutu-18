@@ -4,26 +4,16 @@ int main(void)
 {
     int n;
     long total = 0;
-    int i = 1;
+    int i;
     scanf("%d", &n);
     if (n < 0)
     {
         printf("NG");
         return 0;
     }
-    while (1)
+    for (i = 2; i <= n; i += 2)
     {
-        if (i > n)
-        {
-            break;
-        }
-        if (i % 2 != 0)
-        {
-            i++;
-            continue;
-        }
         total += i;
-        i++;
     }
     printf("%ld", total);
     return 0;
